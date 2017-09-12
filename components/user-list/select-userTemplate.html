@@ -1,0 +1,17 @@
+<div class="container">
+  <h3 class="selectUser">Who can view your photo?</h3>
+  <legend>Select Users</legend>
+      <div layout="row" layout-wrap flex>
+          <div flex="50" ng-repeat="user in usersList">
+            <md-checkbox ng-checked="exists(user._id)" ng-click="setPhotoPermissions(user._id)">
+              {{ user.first_name }} <span ng-if="exists(user._id)"><b>selected<b></span>
+            </md-checkbox>
+          </div>
+      </div>
+
+    <div flex="100">
+      <h4 class="md-title">Selected Items</h4>
+      <code style="display: block; padding: 8px;">{{main.photoPermissions | json}}</code>
+    </div>
+
+</div>

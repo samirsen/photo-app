@@ -1,0 +1,14 @@
+<div class="container">
+  <h1 class="selectUser">Choose a User!</h1>
+  <md-list layout="column" layout-align="center center" class="userList">
+      <md-list-item ng-repeat="user in usersList">
+        <div>
+          <md-button ng-href = "#!/users/{{user._id}}" class="md-accent">
+              {{user.first_name}} {{user.last_name}}
+          </md-button>
+          <span class="lastActivity">{{ user.last_activity }}</span>
+          <span ng-if="user.last_activity === 'Uploaded Photo'"><img ng-src="/images/{{ user.last_photo }}" class="thumb"/></span>
+        </div>
+      </md-list-item>
+  </md-list>
+</div>
