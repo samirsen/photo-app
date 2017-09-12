@@ -1,0 +1,25 @@
+<div>
+    <h1>Login Page</h1>
+
+    <div><label>username <input type="text" ng-model="username"></label></div>
+    <div><label>password <input type="password" ng-model="password"></label></div>
+
+    <md-button ng-click="submit()">Login</md-button>
+
+    <h2>New User? Register Here!</h2>
+    <p>Fill out your registration information here and click "Register Me" to join!</p>
+
+    <div><label>Enter username <input type = "text" ng-model="userDetails.login_name"></label></div>
+    <div><label>Enter password <input type = "password" ng-model="userDetails.password"></label></div>
+    <div><label>Enter password again <input type = "password" ng-model="confirmPassword"></label></div>
+    <div><label>Enter first name <input type = "text" ng-model="userDetails.first_name"></label></div>
+    <div><label>Enter last name <input type = "text" ng-model="userDetails.last_name"></label></div>
+    <div><label>Enter location <input type = "text" ng-model="userDetails.location"></label></div>
+    <div><label>Enter description <input type = "text" ng-model="userDetails.description"></label></div>
+    <div><label>Enter occupation <input type = "text" ng-model="userDetails.occupation"></label></div>
+
+    <span>
+      <md-button ng-click="register()">Register Me</md-button>
+      <!-- <md-button ng-show="registered" ng-click="submit()">Login</md-button> -->
+    </span>
+<div>

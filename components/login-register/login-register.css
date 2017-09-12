@@ -1,0 +1,10 @@
+.selectUser {
+    text-align: center;
+    font-family: fantasy;
+    color: red;
+}
+
+.userList {
+    border: 2px solid orange;
+    border-width: thin;
+}
