@@ -1,0 +1,63 @@
+/*
+CSS for the CS142 project #5 main page
+
+Since CSS uses a global name space for classes we should use class names starting with
+cs142-main- here.
+*/
+
+.myName {
+    font-size: 24px;
+    font-weight: bold;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    padding-left: 10px;
+    padding-top: 14px;
+}
+
+.message {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    padding-right: 10px;
+    padding-top: 14px;
+}
+
+.logoutBtn {
+    color: purple;
+    margin-bottom: 20px;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+a:visited{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: green;
+}
+
+.photoUpload{
+    display: flex;
+    padding-top: 14px;
+}
+
+.uploadBtn{
+    display: flex;
+    padding-left: 5px; 
+}
+
+.checkbox {
+    font-size: 18px;
+    font-weight: 300;
+    padding-right: 10px;
+    padding-top: 14px;
+}

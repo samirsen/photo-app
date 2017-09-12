@@ -1,0 +1,59 @@
+Project #8 - Submission form
+
+Please fill in this form and submit it with your project #8.
+
+Enter no more than 5 user stories that you did for the assignment that you would like to be
+graded on. For each story include the following information:
+
+Story number and name: 1 -  Extend user profile detail with usage
+Story points: 3
+Brief description to see the story in action: View most recent photo uploaded and most commented photo
+of user by navigating to the user's detail page. Logged in user cannot see a photo they don't have permissions
+to see (visibility).
+
+Story number and name: 2 - @mentions in comments
+Story points: 6
+Brief description to see the story in action: Go to a user's photos and type '@' which will trigger
+a dropdown menu of users from the users list. Select a user and post comment. If you navigate to the mentioned
+persons details page, thumbnails of the photos he or she were mentioned in will appear under "@mentions for user" heading.
+Logged in user cannot see a photo mention that they don't have permission to see (visibility).
+
+Story number and name: 3 - Visibility control on photos
+Story points: 4
+Brief description to see the story in action: When uploading a photo, can set the visibility controls by clicking
+on the button in the toolbar to give viewing permissions to a set of users.
+These are the set of users who can view the uploaded photo. Must also include yourself when setting viewing permissions.
+Works in tandem with all the other stories implemented.
+
+Story number and name: 8 - Sidebar list marks users with new activity
+Story points: 3
+Brief description to see the story in action: Can see the last activity of any user by looking at the side nav
+Contains a brief description of last activity performed and if the last activity was a photo upload, provides
+a thumbnail of the photo that was uploaded.
+
+Total Story Points: 16
+
+Marketing Video URL (ensure permissions are set to public viewing): https://www.youtube.com/watch?v=SYtdjyaER2g&feature=youtu.be 
+
+Is it OK with you if we post your Marketing Video URL on the class discussion forum? Yeah!
+
+Any special instructions for Grading (should be easy to run app from new machine):
+For @mentions story, ran: npm install ment.io --save
+
+
+************************************ Example *******************
+* As an example for if you did only story 5 your file would look like:
+*
+* Story number and name:  5 - Activity Feed
+* Story points:  4
+* Brief description to see the story in action:
+* Push the button labeled Activity on the toolbar and view the 10 most recent activities of the
+* current user.
+*
+* Total Story Points: 4
+*
+* Marketing Video URL (ensure permissions are set to public viewing): http://www.youtube.com ---
+*
+* Is it OK with you if we post your Marketing Video URL on the class discussion forum? Yes
+*
+* Instructions for Grading (should be easy to run app from new machine): None
