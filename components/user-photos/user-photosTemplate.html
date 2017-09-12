@@ -1,0 +1,74 @@
+<div>
+    <h1 class="displayMessage">Displaying {{user.first_name}}'s photos</h1>
+
+    <div ng-show="main.isChecked">
+        <md-card>
+            <img ng-src="/images/{{currPhoto.file_name}}" class="md-card-image" alt="image caption">
+            <md-card-content>
+                <h2>{{currPhoto.file_name}}</h2>
+                <p>{{currPhoto.date_time}}</p>
+            </md-card-content>
+            <md-card-actions layout="row" layout-align="center">
+                <md-button ng-click="prev()" ng-disabled="prevDisable">prev</md-button>
+                <md-button ng-click="next()" ng-disabled="nextDisable">next</md-button>
+            </md-card-actions>
+            <md-card-footer>
+                <md-list>
+                    <md-list-item ng-repeat = "comment in currPhoto.comments">
+                        <a ng-href="#!/users/{{comment.user._id}}" class="username">
+                            {{comment.user.first_name}} {{comment.user.last_name}}
+                        </a>
+                        <div class="date">&nbsp{{comment.date_time}}:</div>
+                        <div class="comment">&nbsp{{comment.comment}}</div>
+                    </md-list-item>
+                </md-list>
+                <div>
+                    <label>
+                        Enter new comment: <input type="text" mentio-id="userMentions"
+                                            mentio mentio-typed-text="typedTerm"
+                                            mentio-items="mentioList | filter:label:typedTerm"
+                                            mentio-select="select(item)" ng-model="currPhoto.newComment">
+                    </label>
+
+                    <md-button ng-click="postComment_stepper(currPhoto, currPhoto.newComment)">POST</md-button>
+                </div>
+            </md-card-footer>
+        </md-card>
+    </div>
+
+    <md-list ng-show="!main.isChecked">
+      <md-list-item ng-repeat="photo in photos">
+        <md-card class="container">
+            <img ng-src="/images/{{photo.file_name}}" class="md-card-image" alt="image caption">
+            <md-card-content>
+                <h2>{{photo.file_name}}</h2>
+                <p>{{photo.date_time}}</p>
+            </md-card-content>
+          
+            <md-card-footer>
+                <md-list>
+                    <md-list-item ng-repeat = "comment in photo.comments">
+                        <a ng-href="#!/users/{{comment.user._id}}" class="username">
+                            {{comment.user.first_name}} {{comment.user.last_name}}
+                        </a>
+                        <div class="date">&nbsp{{comment.date_time}}:</div>
+                        <div class="comment">&nbsp{{comment.comment}}</div>
+                    </md-list-item>
+                </md-list>
+
+                <div>
+                    <label>
+                        Enter new comment: <input type="text" mentio-id="userMentions"
+                                            mentio mentio-typed-text="typedTerm"
+                                            mentio-items="mentioList | filter:label:typedTerm"
+                                            mentio-select="select(item)" ng-model="photo.newComment">
+                    </label>
+
+                    <md-button ng-click="postComment($index, photo.newComment)">POST</md-button>
+                </div>
+
+            </md-card-footer>
+        </md-card>
+      </md-list-item>
+    <md-list>
+</div>
