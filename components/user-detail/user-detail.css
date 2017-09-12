@@ -1,0 +1,21 @@
+#currUser {
+    font-family: fantasy;
+    color: green;
+}
+
+.detailsList {
+    border: 3px solid lightgreen;
+}
+
+.photosPage {
+    text-indent: 20px;
+    color: turquoise;
+    font-size: 36px;
+    padding: 30px;
+}
+
+.thumbnail {
+    width: 14em;
+    height: 7em;
+    padding: 0.2em;
+}

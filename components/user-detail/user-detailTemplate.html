@@ -1,0 +1,54 @@
+<div>
+    <h1 id="currUser">Details for {{user.last_name}}, {{user.first_name}}</h1>
+    <ul class="detailsList">
+        <li>User ID: {{user._id}}</li>
+        <li>First Name: {{user.first_name}}</li>
+        <li>Last Name: {{user.last_name}}</li>
+        <li>Location: {{user.location}}</li>
+        <li>Description: {{user.description}}</li>
+        <li>Occupation: {{user.occupation}}</li>
+    </ul>
+
+    <div>
+        <h4>Most Recently Uploaded Photo</h4>
+        <div ng-if="mostRecentPhoto" class="mostRecentPhoto">
+          <span flex="">
+              <a href="#!photos/{{mostRecentPhoto.user_id}}/{{mostRecentPhoto._id}}"><img class="thumbnail" ng-src="/images/{{mostRecentPhoto.file_name}}" alt="image caption"></a>
+          <span>
+          <div>Uploaded on {{ mostRecentPhoto.date_time }} </div>
+        </div>
+        <div ng-if="!mostRecentPhoto">Cannot access this photo (visibility)</div>
+   </div>
+
+        <h4>Most Commented Photo</h4>
+        <div>
+          <div ng-if="mostCommentsPhoto" class="mostCommentsPhoto">
+            <span flex="">
+                <a href="#!photos/{{mostCommentsPhoto.photo.user_id}}/{{mostCommentsPhoto.photo._id}}"><img class="thumbnail" ng-src="/images/{{mostCommentsPhoto.photo.file_name}}" alt="image caption"></a>
+            <span>
+            <div>Uploaded on {{ mostCommentsPhoto.photo.date_time }} </div>
+            <div>Number of Comments: {{mostCommentsPhoto.commentsCount}} </div>
+          </div>
+          <div ng-if="!mostCommentsPhoto">Cannot access this photo (visibility)</div>
+        </div>
+    </div>
+
+    <div>
+        <h4>@Mentions for {{user.first_name}} {{user.last_name}}</h4>
+        <div ng-repeat="photo in photoMentions">
+            <span flex="">
+                <a href="#!photos/{{photo.user_id}}/{{photo._id}}"><img class="thumbnail" ng-src="/images/{{photo.file_name}}"></a>
+            <span>
+            <div><a href="#!users/{{photo.user_id}}"> {{ photoOwner[$index].first_name }} {{ photoOwner[$index].last_name }}</a></br></br></br></div>
+        </div>
+        <div ng-if="photoMentions.length === 0">No @mentions for this user (may be due to visibility)</br></br></br></div>
+    </div>
+
+    <div ng-show="main.isChecked === true">
+        <a ng-href="#!/photos/{{user._id}}/{{main.photoId}}" class="photosPage">See My Photos!<a/>
+    </div>
+
+    <div ng-show="main.isChecked === false">
+        <a ng-href="#!/photos/{{user._id}}" class="photosPage">See My Photos!<a/>
+    </div>
+<div>
