@@ -1,0 +1,1 @@
+Stores user-details javascript
